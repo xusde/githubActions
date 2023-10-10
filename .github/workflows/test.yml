@@ -2,7 +2,7 @@ name: first Action
 on: [push]
 jobs:
   print_hello_world:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo 'first step'
       - run: echo 'second step'
