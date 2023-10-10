@@ -1,13 +1,15 @@
-name: first Action
+name: build
 on: [push]
 jobs:
-  print_hello_world:
+  buid:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'first step'
-      - run: echo 'second step'
-  print_hello_world2:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'first step'
-      - run: echo 'second step'
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: setup node env
+        uses: actions/setup-node@v2
+        with: node-version: 18
+      - name: build project
+        run: npm run build
+
+  
