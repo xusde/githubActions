@@ -6,3 +6,8 @@ jobs:
     steps:
       - run: echo 'first step'
       - run: echo 'second step'
+  print_hello_world2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'first step'
+      - run: echo 'second step'
